@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Maven Pro', sans-serif;
 }
 
 .clr{clear: both;}
@@ -157,7 +158,23 @@ header.sticky ul li button a{
 }
 
 
-
+/* section-card-quote */
+#card-quote{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+}
+#card-quote .cards-layout{
+    width: 75%;
+    height: 100%;
+    border: 2px solid green;
+}
+#card-quote .quote{
+    width: 25%;
+    height: 100%;
+    border: 2px solid magenta;
+}
 
 
 footer{

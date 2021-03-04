@@ -1,146 +1,99 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gas Station</title>
-        <link href="index.css" rel="stylesheet" type="text/css">
-        <link href="style.css" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <a class="logo" href="index.html">Logo</a>
-            <ul class="nav">
-            <li><a href="">Special Deals</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">Feedback</a></li>
-            <li><button><a href="">Find Us</a></button></li>
-            </ul>
-        </header>
-        <section>
-            <div class="slider">
-                <figure>
-                    <img src="canco_03.jpg">
-                    <img src="disney2.jpg">
-                    <img src="disney.jpg">
-                    <img src="disney3.jpg">
-                    <img src="disney.jpg">
-                </figure>
-                <p id="text-on-banner">Fuel Your Adventures</p>
-            </div>
-            <script type="text/javascript">
-                window.addEventListener("scroll", function(){
-                    var header = document.querySelector("header");
-                    header.classList.toggle("sticky", window.scrollY > 0);
-                })
-            </script>
-        </section>
-        <main>
-            <div id="container">
-                Hello! I am a container.
-            </div>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gas Station</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="style.css" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-            
-            <!--Cards-->
-            <p style="border: solid #000; width: 75%; float: left; text-align: center; font-size: 3rem;">
-                Cards will be displayed here.
-            </p>
+  <body>
+    <header>
+      <a class="logo" href="index.html">Logo</a>
+      <ul class="nav">
+        <li><a href="">Special Deals</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Feedback</a></li>
+        <li>
+          <button><a href="">Find Us</a></button>
+        </li>
+      </ul>
+    </header>
 
-        <!--
-            <div class="cards-section">
-            <div class="grid">
-                <div class="grid-item">
-                  <div class="card">
-                    <img class="card-img" src="./img/rome.jpg" alt="Rome" />
-                    <div class="card-content">
-                      <h1 class="card-header">Rome</h1>
-                      <p class="card-text">
-                        Rome is known for its stunning <strong> architecture</strong>,
-                        with the Colleseum, Pantheon, and Trevi Fountain as the main
-                        attractions.
-                      </p>
-                      <button class="card-btn">Visit <span>&rarr;</span></button>
-                    </div>
-                  </div>
-                </div>
-                <div class="grid-item">
-                  <div class="card">
-                    <img
-                      class="card-img"
-                      src="./img/grand-canyon.jpg"
-                      alt="Grand Canyon"
-                    />
-                    <div class="card-content">
-                      <h1 class="card-header">Grand Canyon</h1>
-                      <p class="card-text">
-                        One of the world's natural wonders, the iconic Grand Canyon draws
-                        oohs and aahs from visitors perched at the edge of its
-                        <strong>towering cliffs</strong>.
-                      </p>
-                      <button class="card-btn">Visit <span>&rarr;</span></button>
-                    </div>
-                  </div>
-                </div>
-                <div class="grid-item">
-                  <div class="card">
-                    <img class="card-img" src="./img/maldives.jpg" alt="Maldives" />
-                    <div class="card-content">
-                      <h1 class="card-header">Maldives</h1>
-                      <p class="card-text">
-                        The Maldives are known for their
-                        <strong>natural environment</strong> including the blue ocean,
-                        white beaches, and clean air, attracting tourists.
-                      </p>
-                      <button class="card-btn">Visit <span>&rarr;</span></button>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            </div>
-        -->
+    <section>
+      <div class="slider">
+        <figure>
+          <img src="canco_03.jpg" />
+          <img src="disney2.jpg" />
+          <img src="disney.jpg" />
+          <img src="disney3.jpg" />
+          <img src="disney.jpg" />
+        </figure>
+        <p id="text-on-banner">Fuel Your Adventures</p>
+      </div>
+      <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+          var header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY > 0);
+        });
+      </script>
+    </section>
+    <div id="container">Hello! I am a container.</div>
 
-            <!--Random Quotes-->
-            <div class="box">
-                <div class="header-box" style="border: solid #000; text-align: center; font-size: 3rem;">
-                    Random Quotes Box
-                </div>
-            </div>
+    <section id="card-quote">
+      <div class="cards-layout">
+        <div class="cards">
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+        </div>
+      </div>
+        <div class="quote">
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      
+    </section>
+    <div class="clr"></div>
 
-            <div class="clr"></div>
+    <div id="services-images">
+      <div class="column">
+        <img src="img_snow.jpg" alt="" style="width: 100%" />
+      </div>
+      <div class="column">
+        <img src="img_mountains.jpg" alt="" style="width: 100%" />
+      </div>
+      <div class="column">
+        <img src="img_forest.jpg" alt="" style="width: 100%" />
+      </div>
+      <div class="column">
+        <img src="img_snow.jpg" alt="" style="width: 100%" />
+      </div>
+      <div class="column">
+        <img src="img_mountains.jpg" alt="" style="width: 100%" />
+      </div>
+    </div>
 
-            <div id="services-images">
-                <div class="column">
-                    <img src="img_snow.jpg" alt="" style="width: 100%;">
-                </div>
-                <div class="column">
-                    <img src="img_mountains.jpg" alt="" style="width: 100%;">
-                </div>
-                <div class="column">
-                    <img src="img_forest.jpg" alt="" style="width: 100%;">
-                </div>
-                <div class="column">
-                    <img src="img_snow.jpg" alt="" style="width: 100%;">
-                </div>
-                <div class="column">
-                    <img src="img_mountains.jpg" alt="" style="width: 100%;">
-                </div>
-            </div>
-        </main>
-        <footer>
-            <div id="col-left">
-                <p><a href="#">Terms & Services</a></p>
-                <p><a href="#">Careers</a></p>
-                <p><a href="#">Become a ABJ Dealer</a></p>
-            </div>
-            <div id="col-mid">
-                <p>ABJ &copy; 2021. All Rights Reserved.</p>
-                <address>228 Tranquille Road, Kamloops, BC, Canada</address>
-            </div>
-            <div id="col-right">
-                <p><a href="#">instagram icon</a></p>
-                <p><a href="#">facebook icon</a></p>
-            </div>
-        </footer>
-    </body>
+    <footer>
+      <div id="col-left">
+        <p><a href="#">Terms & Services</a></p>
+        <p><a href="#">Careers</a></p>
+        <p><a href="#">Become a ABJ Dealer</a></p>
+      </div>
+      <div id="col-mid">
+        <p>ABJ &copy; 2021. All Rights Reserved.</p>
+        <address>228 Tranquille Road, Kamloops, BC, Canada</address>
+      </div>
+      <div id="col-right">
+        <p><a href="#">instagram icon</a></p>
+        <p><a href="#">facebook icon</a></p>
+      </div>
+    </footer>
+  </body>
 </html>
