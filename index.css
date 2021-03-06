@@ -176,13 +176,6 @@ header.sticky ul li button a{
     /* border: 2px solid green; */
     padding: 30px;
 }
-#card-quote .quote{
-    width: 25%;
-    height: 100%;
-    /* border: 2px solid magenta; */
-}
-
-
 .card{
     width: 28%;
     height: 100%;
@@ -220,6 +213,31 @@ header.sticky ul li button a{
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     
+}
+#card-quote .quote #display{
+    margin: 1rem auto;
+    padding: 1rem;
+    background: linear-gradient(35deg, #ccffff, #ffcccc);
+    position: relative;
+    border: solid rgb(192, 191, 191);
+    width: 18rem;
+    height: 18rem;
+    
+}
+#card-quote .quote #display #output{
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 0.6rem 1rem 0.6rem 1rem;
+    /*border: solid black;*/
+}
+#card-quote .quote button{
+    padding: 0.3rem 0.5rem;
+    font-size: 1rem;
+    background: rgb(202, 240, 240);
+    border: 1.5px solid rgb(121, 118, 118);
+    position: absolute;
+    bottom: 0.6rem;
+    right: 0.5rem;
 }
 
 
