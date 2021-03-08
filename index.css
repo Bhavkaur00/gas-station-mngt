@@ -49,6 +49,9 @@ header .logo{
     letter-spacing: 2px;
     transition: 0.6s;
 }
+header .logo img{
+    width: 50%;
+}
 header ul{
     position: relative;
     display: flex;
