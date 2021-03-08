@@ -6,8 +6,18 @@
 }
 
 .clr{clear: both;}
-
 section{color: #000;}
+.main
+{
+	text-align:center;
+	margin: 1rem auto;
+    padding: 1rem;
+    background: linear-gradient(35deg, #ccffff, #ffcccc);
+    position: relative;
+	border: solid rgb(192, 191, 191);
+    width: 18rem;
+    height: 15rem;
+}
 body
 {
     background: #fff;
@@ -193,7 +203,6 @@ header.sticky ul li button a{
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;  
     height: 50%;
-    background: url("i1.jpg");
     background-position: center;
     background-size: cover;
 }
