@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
     <title>Gas Station</title>
     <link href="index.css" rel="stylesheet" type="text/css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap"
-      rel="stylesheet"
-    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <header>
       <a class="logo" href="index.html"><img src="logo.png" alt="CANCO"></a>
       <ul class="nav">
-        <li><a href="deals.html">Special Deals</a></li>
+        <li><a href="deals.html">Deals</a></li>
         <li><a href="">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="">Contact</a></li>
         <li><a href="">Feedback</a></li>
-        <li>
-          <button><a href="">Find Us</a></button>
-        </li>
       </ul>
     </header>
 
@@ -44,7 +41,33 @@
         });
       </script>
     </section>
-    <div id="container">Hello! I am a container.</div>
+    <div class="container">
+      <div id="left-map">
+        map here
+      </div>
+      <div id="right-about">
+        <h1>Kamloops</h1>
+        <h2>CANCO Gas Station</h2>
+        <div class="info">
+          <div id="left-address">
+            <address>
+              204 - 228 Tranquille Road<br>
+              Kamloops BC V2B 3G1<br>
+              Canada
+            </address>
+          </div>
+          <div id="right-phone">
+            <a href="tel:250-376-1710">CALL US</a>
+            <p>We are just a click away!</p>
+          </div>
+          <h3>Canco is an independent chain of gas stations that launched in 2016.</h3>
+          <p>A bold alternative to big-box retailers, Canco was born from a vision to become a leading gas retailer brand. 
+            We purchase directly from major fuel refineries and terminals in Canada to ensure premium products are offered at a competitive price.</p>
+          <p>Proudly local, we put people first and run our business with honesty, integrity and excellence.</p>
+        </div>
+      </div>
+    </div>
+    <div class="clr"></div>
 
     <section id="card-quote">
       <div class="cards-layout">
@@ -95,37 +118,57 @@
 
     <div class="clr"></div>
 
-    <div id="services-images">
-      <div class="column">
-        <img src="Canco-ig-pix/wash1.jpg" alt=""/>
+    <div id="services-row">
+      <div class="column" id="img1">
+        <img src="Canco-ig-pix/wash3.jpg" alt="">
       </div>
-      <div class="column">
-        <img src="Canco-ig-pix/quote2.jpg" alt=""/>
+      <div class="column" id="img2">
+        <img src="Canco-ig-pix/quote2.jpg" alt="">
       </div>
-      <div class="column">
+      <div class="column" id="img3">
         <img src="Canco-ig-pix/road2.jpg" alt=""/>
       </div>
-      <div class="column">
+      <div class="column" id="img4">
         <img src="Canco-ig-pix/quote3.jpg" alt=""/>
       </div>
-      <div class="column">
+      <div class="column" id="img5">
         <img src="Canco-ig-pix/atm1.jpg" alt=""/>
       </div>
     </div>
 
+    <div class="canco-app">
+      <div id="heading">
+        <h3>Savings Begin Here!</h3>
+      </div>
+      <div class="img-left">
+        <img src="" alt="">
+      </div>
+      <div class="box-right">
+        <h1>Canco Cash App</h1>
+        <p>Canco’s mobile app lets you earn Canco Cash, manage your balance, gift card – card-free.</p>
+        <a href="https://apps.apple.com/kh/app/canco-petroleum/id1523902717"><img src="appStore.png" alt="CancoApp-AppleStore"></a><br>
+        <a href="https://play.google.com/store/apps/details?id=com.ackroo.canco&hl=en_CA"><img src="googlePlay.png" alt="CancoApp-AppleStore"></a>
+        <div id="app-button">
+          <button>Explore the App</button>
+        </div>
+      </div>
+    </div>
+
     <footer>
-      <div id="col-left">
-        <p><a href="#">Terms & Services</a></p>
-        <p><a href="#">Careers</a></p>
-        <p><a href="#">Become a ABJ Dealer</a></p>
-      </div>
-      <div id="col-mid">
-        <p>ABJ &copy; 2021. All Rights Reserved.</p>
-        <address>228 Tranquille Road, Kamloops, BC, Canada</address>
-      </div>
-      <div id="col-right">
-        <p><a href="#">instagram icon</a></p>
-        <p><a href="#">facebook icon</a></p>
+      <div id="container">
+        <div id="col-left">
+        <p><a href="https://cancopetroleum.ca/terms/">Terms & Privacy</a></p>
+        <p><a href="https://cancopetroleum.ca/careers/">Careers</a></p>
+        <p><a href="https://cancopetroleum.ca/canco-dealer/">Become a CANCO Dealer</a></p>
+        </div>
+        <div id="col-mid">
+          <h2>Get the Canco Cash App Today!</h2>
+          <p>Canco’s mobile app lets you earn Canco Cash, manage your balance, gift card – card-free.</p>
+        </div>
+        <div id="col-right">
+          <a href="https://apps.apple.com/kh/app/canco-petroleum/id1523902717"><img src="appStore.png" alt="CancoApp-AppleStore"></a><br>
+          <a href="https://play.google.com/store/apps/details?id=com.ackroo.canco&hl=en_CA"><img src="googlePlay.png" alt="CancoApp-AppleStore"></a>
+        </div>
       </div>
     </footer>
   </body>

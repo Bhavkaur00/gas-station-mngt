@@ -2,11 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Maven Pro', sans-serif;
 }
 
 .clr{clear: both;}
 section{color: #000;}
+
 .main
 {
 	text-align:center;
@@ -75,19 +75,6 @@ header.sticky .logo, header.sticky ul li a{
     color: #fff;
     padding: 10px;
 }
-header ul li button{
-    background:rgb(7, 24, 121);
-    padding: 0.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-header.sticky ul li button{
-    background: #fff;
-    padding: 0.5rem;
-}
-header.sticky ul li button a{
-    color: #000;
-}
 .slider{
     overflow: hidden;
     position: relative;
@@ -137,43 +124,95 @@ header.sticky ul li button a{
 #text-on-banner{
     font-size: 4em;
     color: #fff;
-    font-family: '';
+    font-family: 'Sacramento', handwriting;
     text-shadow: 2px 5px 4px orange;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-#container{
-    background: rgb(223, 222, 161);
-    width: 60%;
-    min-height: 300px;
+.container{
+    width: 90%;
+    min-height: 20rem;
     margin: 100px auto;
-    padding: 25px 20px;
+    padding: 1.5rem 1.2rem;
     border: solid red;
 }
-#services-images{
+.container #left-map{
+    width: 45%;
+    height: 20rem;
+    float: left;
+    margin-right: 1rem;
+    border: solid grey;
+}
+.container #right-about{
+    width: 50%;
+    float: right;
+    line-height: 2.5rem;
+    border: solid lightblue;
+}
+.container #right-about h1{
+    font-size: 2rem;
+    color: rgb(236, 78, 16);
+}
+.container #right-about h2{
+    color: #003082;
+}
+.container #right-about .info #left-address{
+    float: left;
+    width: 60%;
+}
+.container #right-about .info #left-address address{
+    text-align: left;
+}
+.container #right-about .info #right-phone{
+    float: left;
+    width: 40%;
+}
+.container #right-about .info #right-phone a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: rgb(5, 185, 5);
+}
+.container #right-about .info #right-phone a:hover{
+    color: rgb(7, 117, 7);
+}
+.canco-app{
+    background: linear-gradient(14deg, #fda085 25%, #f6d365 100%)!important;
+    font: 60px 'Sacramento', handwriting;
+}
+#services-row{
     width: 90%;
     margin: 50px auto;
+    display: flex;
 }
-#services-images .column{
-    float: left;
-    width: 20%;
+#services-row .column{
     padding: 0.3%;
 }
-#services-images .column img{
+#services-row .column img{
     width: 100%;
-    height: 20rem;
+    vertical-align: middle;
 }
-#services-images .column img:hover{
+#img1{flex: 0.9972;}
+#img2{flex: 1;}
+#img3{flex: 1.5;}
+#img4{flex: 1;}
+#img5{flex: 0.9972;}
+/*
+#services-row .column img:hover{
     transform: scale(1.1);
 }
-#services-images::after{
-    content: "";
-    clear: both;
-    display: table;
+@media only screen and (max-width: 1060px){
+    #services-row .column{
+        flex: 50%;
 }
-
+@media only screen and (max-width: 768px){
+    #services-row{
+        flex-direction: column;
+    }
+}
+*/
 
 /* section-card-quote */
 #card-quote{
@@ -257,43 +296,64 @@ header.sticky ul li button a{
 }
 */
 
-
-
 footer{
-    display: table;
-    width: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 19px 0 9px;
+    background: #00163c;
 }
-footer a{
+#container{
+    display: flex;
+    padding: 24px 0 24px;
+    justify-content: space-between;
+}
+footer div#col-left p a, footer div#col-right a{
+    color: #cccccc;
+    line-height: 40px;
     text-decoration: none;
-    color: #fff;
 }
-footer div{
-    width: 33.33%;
-    display: table-cell;
-    margin-top: 25px;
-    padding: 20px;
-    background-color: rgb(7, 24, 121);
-    color: #fff;
-}
-footer p, address{
+footer div#col-mid{
     text-align: center;
-    line-height: 1.6em;
+    color: #ffffff;
+    line-height: 25px;
+    margin-top: 10px;
+    flex: 2;
 }
-footer #col-left{
-    font-size: 1.1em;
+footer div#col-mid h2{padding: 0 0 10px;}
+
+footer div#col-mid p{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
-footer #col-mid{
-    font-size: 1.2em;
+footer div#col-left{
+    margin-left: 112px;
+    flex: 1;
 }
-footer #col-right{
-    
+footer div#col-right{
+    margin-right: 112px;
+    margin-top: 5px;
+    text-align: center;
+    flex: 1;
 }
-@media only screen and (max-width: 768px) {
-    footer div{
-        display: table-row;
+footer div#col-right a img{
+    width: 125px;
+}
+
+@media(max-width: 768px){
+    #container{
+        flex-direction: column;
+    }
+    footer div#col-mid{
+        display: none;
+    }
+    footer div#col-left, footer div#col-right{
+        margin: 25px auto;
+    }
+    footer div#col-left{
+        text-align: center;
     }
 }
+
+
 
 /*
 .homepage{
