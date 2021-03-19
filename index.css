@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', Arial, sans-serif;
 }
 
 .clr{clear: both;}
@@ -178,41 +179,6 @@ header.sticky .logo, header.sticky ul li a{
 .container #right-about .info #right-phone a:hover{
     color: rgb(7, 117, 7);
 }
-.canco-app{
-    background: linear-gradient(14deg, #fda085 25%, #f6d365 100%)!important;
-    font: 60px 'Sacramento', handwriting;
-}
-#services-row{
-    width: 90%;
-    margin: 50px auto;
-    display: flex;
-}
-#services-row .column{
-    padding: 0.3%;
-}
-#services-row .column img{
-    width: 100%;
-    vertical-align: middle;
-}
-#img1{flex: 0.9972;}
-#img2{flex: 1;}
-#img3{flex: 1.5;}
-#img4{flex: 1;}
-#img5{flex: 0.9972;}
-/*
-#services-row .column img:hover{
-    transform: scale(1.1);
-}
-@media only screen and (max-width: 1060px){
-    #services-row .column{
-        flex: 50%;
-}
-@media only screen and (max-width: 768px){
-    #services-row{
-        flex-direction: column;
-    }
-}
-*/
 
 /* section-card-quote */
 #card-quote{
@@ -295,6 +261,113 @@ header.sticky .logo, header.sticky ul li a{
     right: 0.5rem;
 }
 */
+
+#services-row{
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+}
+#services-row .column{
+    padding: 0.3%;
+}
+#services-row .column img{
+    width: 100%;
+    vertical-align: middle;
+}
+#img1{flex: 0.9972;}
+#img2{flex: 1;}
+#img3{flex: 1.5;}
+#img4{flex: 1;}
+#img5{flex: 0.9972;}
+
+@media (max-width: 750px){
+    
+}
+
+.app{
+    background: linear-gradient(14deg, #fda085 25%, #f6d365 100%)!important;
+    padding: 60px 0 5px 0;
+    text-align: center;
+}
+.app div.app-info{
+    display: flex;
+    width: 65%;
+    justify-content: space-between;
+    margin: 30px auto 0;
+}
+.app div#hand h3{
+    color: #f25900;
+    font: 60px 'Sacramento', handwriting;
+    padding: 0 0 10px;
+}
+.app .img-left img{
+    width: 90%;
+}
+.app div.box-right{
+    width: 80%;
+}
+.app .box-right h1{
+    color: #003082;
+    font-size: 34px;
+    padding: 0 0 10px;
+}
+.app .box-right p{
+    color: #000000;
+    font-size: 16px;
+    width: 80%;
+    margin: 10px auto 25px;
+}
+.app .box-right a img{
+    width: 135px;
+    margin: 10px 0;
+}
+.app .box-right div#app-button{
+    padding: 0 0 7px;
+    margin-top: 25px;
+}
+.app .box-right div#app-button a{
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #ffffff;
+    background: #003082;
+    text-decoration: none;
+}
+@media (max-width: 975px){
+    .app div.app-info{
+        flex-direction: column;
+    }
+    .app div.box-right{
+        margin: 20px auto 10px;
+    }
+}
+@media (max-width: 768px){
+    .app div.app-info{
+        flex-direction: column;
+    }
+    .app div.app-info{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .app div.img-left{
+        order: 2;
+        width: 100%;
+        margin: 20px 0;
+        padding: 0;
+    }
+    .app div.box-right{
+        order: 1;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .app div.box-right p{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
 
 footer{
     padding: 19px 0 9px;
