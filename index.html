@@ -12,6 +12,35 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <script>
+      function initMap(){
+        const canco = { lat: 50.68615503108337, lng: -120.35547783522414 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: canco,
+        });
+        const marker = new google.maps.Marker({
+          position: canco,
+          map: map,
+        });
+      }
+    </script>
+
+    <script>
+      $(document).ready(function() {
+      $("#toggle").click(function() {
+        var element = $("#toggle").text();
+        if (element == "READ MORE") {
+          $("#toggle").text("READ LESS");
+          $("#text").slideDown();
+        } else {
+          $("#toggle").text("READ MORE");
+          $("#text").slideUp();
+        }
+      });
+    });
+    </script>
   </head>
 
   <body>
@@ -42,11 +71,12 @@
         });
       </script>
     </section>
+
     <div class="container">
-      <div id="left-map">
-        map here
+      <div id="map">
+        <iframe title="Canco-Wash" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=204%20-%20228%20Tranquille%20Road%20Kamloops%20BC%20V2B%203G1%20Canada+(Canco%20Gas%20Station)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
       </div>
-      <div id="right-about">
+        <div id="right-about">
         <h1>Kamloops</h1>
         <h2>CANCO Gas Station</h2>
         <div class="info">
@@ -58,17 +88,25 @@
             </address>
           </div>
           <div id="right-phone">
-            <a href="tel:250-376-1710">CALL US</a>
+            <a href="tel:250-376-1710"><img src="call-icon.png" alt="call-icon">CALL US</a>
             <p>We are just a click away!</p>
           </div>
+        </div>
+          <div class="clr"></div>
+          
+        <div id="about">
           <h3>Canco is an independent chain of gas stations that launched in 2016.</h3>
-          <p>A bold alternative to big-box retailers, Canco was born from a vision to become a leading gas retailer brand. 
-            We purchase directly from major fuel refineries and terminals in Canada to ensure premium products are offered at a competitive price.</p>
-          <p>Proudly local, we put people first and run our business with honesty, integrity and excellence.</p>
+          <span id="text">
+            <p>A bold alternative to big-box retailers, Canco was born from a vision to become a leading gas retailer brand. 
+              We purchase directly from major fuel refineries and terminals in Canada to ensure premium products are offered at a competitive price.</p>
+            <p>Proudly local, we put people first and run our business with honesty, integrity and excellence.</p>
+          </span>
+          <div class="btn">
+            <button id="toggle">READ MORE</button>
+          </div>
         </div>
       </div>
     </div>
-    <div class="clr"></div>
 
     <section id="card-quote">
       <div class="cards-layout">
