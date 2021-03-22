@@ -13,11 +13,12 @@ section{color: #000;}
 	text-align:center;
 	margin: 1rem auto;
     padding: 1rem;
-    background: linear-gradient(35deg, #ccffff, #ffcccc);
+    background:  #00163c;
     position: relative;
+color:#f25900;
 	border: solid rgb(192, 191, 191);
-    width: 18rem;
-    height: 15rem;
+    width: 48rem;
+    height: 25rem;
 }
 body
 {
@@ -295,32 +296,34 @@ header.sticky .logo, header.sticky ul li a{
     border-top-right-radius: 12px;
     
 }
-/*
-#card-quote .quote #display{
+
+ .quote #display{
     margin: 1rem auto;
     padding: 1rem;
-    background: linear-gradient(35deg, #ccffff, #ffcccc);
+    background: #00163c;
     position: relative;
     border: solid rgb(192, 191, 191);
-    width: 18rem;
-    height: 18rem;
+    width: 28rem;
+    height: 10rem;
     
 }
-#card-quote .quote #display #output{
+.quote #display #output{
     text-align: center;
     font-size: 1.6rem;
+	color:#f25900;
+opacity: 0.8;
     margin: 0.6rem 1rem 0.6rem 1rem;
 }
-#card-quote .quote button{
+.quote button{
     padding: 0.3rem 0.5rem;
     font-size: 1rem;
-    background: rgb(202, 240, 240);
+    background:#f25900;
     border: 1.5px solid rgb(121, 118, 118);
     position: absolute;
     bottom: 0.6rem;
     right: 0.5rem;
 }
-*/
+
 
 /*5 IMAGES IN A ROW*/
 

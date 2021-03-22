@@ -17,18 +17,16 @@
 
   <body>
     <header>
-      <a class="logo" href="contact.html"><img src="logo.png" alt="CANCO"></a>
+      <a class="logo" href="index.html"><img src="logo.png" alt="CANCO"></a>
       <ul class="nav">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">About</a></li>
         <li><a href="deals.html">Deals</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="feedback.html">Feedback</a></li>
       </ul>
     </header>
-
+		<img src="canco_04.jpeg" alt="" style="width:100%; height:20%;">
     <div class="containers">  
   <form id="contact" action="" method="post", onsubmit="validate();">
-    <h3>Contact</h3>
     <h4>Have a Question? Feel Free to ask us!</h4>
     <fieldset>
       <input placeholder="Name" type="text" tabindex="1" required autofocus>
@@ -47,6 +45,70 @@
     </fieldset>
   </form> 
 </div>
+<button class="open-button" onclick="openForm()">Click to Enquire</button>
+
+<div class="chat" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Ask Your Questions</h1>
+
+    <li id='menu-head'>Any Query? &#128515
+        <ul id='menu-body'>
+            <li id='menu-s'>* Store Hours?</li>
+            <li id='menu-p'>* Propane Hours?</li>
+            <li id='menu-d'>* Do we have DEISEL?</li>
+            <li id='menu-c'>* Car Wash Options!</li>
+            <li id='menu-f'>* Do we have Full-serve Service Available?</li>
+			<li id='menu-a'>* Do We have Automatic Car Wash?</li>
+		</ul>
+    </li>
+    </form>
+</div>
+<script>
+
+		function openForm() {
+		  document.getElementById("myForm").style.display = "block";
+		}
+
+		function closeForm() {
+		  document.getElementById("myForm").style.display = "none";
+		}
+		document.getElementById("menu-head").addEventListener("mouseenter", function(){
+		document.getElementById("menu-head").style.backgroundColor = "tomato";
+		document.getElementById("menu-body").style.display ="block";
+		});
+		
+        document.getElementById("menu-head").addEventListener("mouseleave", function(){
+		document.getElementById("menu-head").style.backgroundColor = "transparent";
+		document.getElementById("menu-body").style.display ="none";
+		});
+		
+        // Display selected technology, i.e., menu item; 'click' event
+        document.getElementById('menu-s').addEventListener("click", function()
+		{
+		alert("We are Open 24 Hours!   Thankyou");
+		});
+		document.getElementById('menu-p').addEventListener("click", function()
+		{
+		alert("Propane Station is Open 7Am - 10Pm.");
+		});
+		document.getElementById('menu-d').addEventListener("click", function()
+		{
+		alert("Yes, We serve DEISEL at our Station.");
+		});
+		document.getElementById('menu-c').addEventListener("click", function()
+		{
+		alert("Car wash Options are available as Premium, Deluxe and Regular. Premium Wah contains Wax and Underspray Included into. Deluxe Wash gives you the option between Wax or the Underspray. However Regular is just the Wash Only Option.");
+		});
+		document.getElementById('menu-f').addEventListener("click", function()
+		{
+		alert("Yes, We do Full-serve");
+		});
+		document.getElementById('menu-a').addEventListener("click", function()
+		{
+		alert("Sorry, Unfortunately We don't have Automatic Option Available Rightnow.");
+		});
+</script>
+
 
     <div class="app">
       <div id="hand">
@@ -54,7 +116,7 @@
       </div>
       <div class="app-info">
         <div class="img-left">
-          <img src="Canco-ig-pix/canco-app-feature-full.png" alt="canco-app">
+          <img src="canco-app.jpeg" alt="canco-app">
         </div>
         <div class="box-right">
           <h1>Canco Cash App</h1>

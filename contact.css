@@ -8,17 +8,6 @@
 .clr{clear: both;}
 section{color: #000;}
 
-.main
-{
-	text-align:center;
-	margin: 1rem auto;
-    padding: 1rem;
-    background: linear-gradient(35deg, #ccffff, #ffcccc);
-    position: relative;
-	border: solid rgb(192, 191, 191);
-    width: 18rem;
-    height: 15rem;
-}
 body
 {
     background: #fff;
@@ -348,3 +337,52 @@ fieldset {
 	outline:0;
 	border:1px solid #999;
 }
+.open-button {
+  background-color: #f25900;
+  color: white;
+  padding: 16px 20px;
+  border: solid black;
+  cursor: pointer;
+  opacity: 0.9;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 200px;
+}
+
+.chat{
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+.form-container {
+  max-width: 350px;
+  padding: 10px;
+  min-height: 300px;
+  background-color: white;
+}
+
+#menu-head { 
+            list-style:none;
+            width:140px; 
+            text-align:center;
+            border:1px solid black; background-color:White;
+            position:relative; left:50px;
+        }
+        #menu-head > ul { 
+            list-style:none;
+            padding:0; margin:0;
+            display:none; 
+			opacity:0.9;
+            border:1px solid blue; 
+			background-color:White;
+            position:absolute; 
+            top:100%; 
+            right:100;
+        }
+        #menu-head > ul > li:hover {
+            background-color:#f25900;
+        }

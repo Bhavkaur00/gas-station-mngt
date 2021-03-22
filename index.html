@@ -28,18 +28,21 @@
     </script>
 
     <script>
-      $(document).ready(function() {
-      $("#toggle").click(function() {
-        var element = $("#toggle").text();
-        if (element == "READ MORE") {
-          $("#toggle").text("READ LESS");
-          $("#text").slideDown();
-        } else {
-          $("#toggle").text("READ MORE");
-          $("#text").slideUp();
-        }
-      });
-    });
+		function myFunction() {
+		 var dots = document.getElementById("dots");
+		  var moreText = document.getElementById("text");
+		  var btnText = document.getElementById("toggle");
+
+  if (dots.style.display === "none") {
+     dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
     </script>
   </head>
 
@@ -47,20 +50,21 @@
     <header>
       <a class="logo" href="index.html"><img src="logo.png" alt="CANCO"></a>
       <ul class="nav">
+		<li><a href="index.html">About</a></li>
         <li><a href="deals.html">Deals</a></li>
-        <li><a href="">Contact</a></li>
-        <li><a href="">Feedback</a></li>
+        <li><a href="contact.html">Contact</a></li>
+       
       </ul>
     </header>
 
     <section>
       <div class="slider">
         <figure>
-          <img src="canco_03.jpg" alt="">
+          <img src="canco_03.jpeg" alt="">
           <img src="disney2.jpg" alt="">
-          <img src="disney.jpg" alt="">
+          <img src="wash2.jpeg" alt="">
           <img src="disney3.jpg" alt="">
-          <img src="disney.jpg" alt="">
+		  <img src="disney.jpg" alt="">
         </figure>
         <p id="text-on-banner">Fuel Your Adventures</p>
       </div>
@@ -95,14 +99,15 @@
           <div class="clr"></div>
           
         <div id="about">
-          <h3>Canco is an independent chain of gas stations that launched in 2016.</h3>
+          <h3>Canco is an independent chain of gas stations that launched in 2016</h3>
+		  <span id="dots"><strong>.....</span>
           <span id="text">
             <p>A bold alternative to big-box retailers, Canco was born from a vision to become a leading gas retailer brand. 
               We purchase directly from major fuel refineries and terminals in Canada to ensure premium products are offered at a competitive price.</p>
             <p>Proudly local, we put people first and run our business with honesty, integrity and excellence.</p>
           </span>
           <div class="btn">
-            <button id="toggle">READ MORE</button>
+            <button onclick="myFunction()" id="toggle">READ MORE</button>
           </div>
         </div>
       </div>
@@ -113,36 +118,38 @@
         
           <div class="card">
             <div class="upper">
-              <img src="i1.jpg" alt=""> 
+              <img src="canco_01.jpg" alt=""> 
             </div>
             <div class="lower">
-              <h1>HEADING</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, labore? Iure cupiditate non dicta pariatur assumenda voluptas, maxime beatae facere?</p>
+              <h1>Canco Helps You Get There</h1>
+              <p>The Best Convenience Store Located in your neighbourhood.  &#128515</p>
             </div>
           </div>
           <div class="card">
             <div class="upper">
-              <img src="i1.jpg" alt=""> 
+              <img src="coffee.jpeg" alt=""> 
             </div>
             <div class="lower">
-              <h1>HEADING</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, labore? Iure cupiditate non dicta pariatur assumenda voluptas, maxime beatae facere?</p>
+              <h1>Drive With Everything</h1>
+              <p>Canco help you to fuel your vehicle along with your body! We offer variety of convenience products to snack food to fresh coffee served at 0.99 cents.</p>
             </div>
           </div>
           <div class="card">
             <div class="upper">
-              <img src="i1.jpg" alt=""> 
+              <img src="wash.jpeg" alt=""> 
             </div>
             <div class="lower">
-              <h1>HEADING</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, labore? Iure cupiditate non dicta pariatur assumenda voluptas, maxime beatae facere?</p>
-            </div>
+              <h1>Car wash</h1>
+              <p> We are proud to offer a variety of Car wash Options from our Udo bays to our Robo wash where we wash it for you at the convenient price.</p> </div>
           </div>
           
       </div>
+      
+    </section>
+	
+	<h2 style="text-align:center">Explore Your Journey with us</h2>
+ <div class="quote">
         
-      <div class="quote">
-        <!--
           <div id="display">
           <div id="output">
             Jobs fill your pockets, adventures fill your soul.
@@ -150,11 +157,8 @@
           <button onclick="newQuote()">Next</button>
           <script src="style.js"></script>
         </div>
-        -->
+        
       </div>
-      
-    </section>
-
     <div class="clr"></div>
 
     <div id="services-row">
@@ -181,7 +185,7 @@
       </div>
       <div class="app-info">
         <div class="img-left">
-          <img src="Canco-ig-pix/canco-app-feature-full.png" alt="canco-app">
+          <img src="canco-app.jpeg" alt="canco-app">
         </div>
         <div class="box-right">
           <h1>Canco Cash App</h1>
