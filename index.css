@@ -13,12 +13,11 @@ section{color: #000;}
 	text-align:center;
 	margin: 1rem auto;
     padding: 1rem;
-    background:  #00163c;
+    background: linear-gradient(35deg, #ccffff, #ffcccc);
     position: relative;
-color:#f25900;
 	border: solid rgb(192, 191, 191);
-    width: 48rem;
-    height: 25rem;
+    width: 18rem;
+    height: 15rem;
 }
 body
 {
@@ -39,6 +38,7 @@ header{
     transition: 0.6s;
     padding: 40px 100px;
     z-index: 100000;
+    background: rgba(0, 0, 0, 0.2);
 }
 header.sticky{
     padding: 5px 100px;
@@ -73,13 +73,63 @@ header ul li a{
     text-decoration: none;
     color: #fff;
     letter-spacing: 2px;
-    font-weight: 500;
+    font-weight: bold;
     transition: 0.6s;
 }
 header.sticky .logo, header.sticky ul li a{
     color: #fff;
     padding: 10px;
 }
+
+/*HAMBURGER-MENU*/
+
+.toggle-button{
+    position: absolute;
+    top: 2.3rem;
+    right: 3.5rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.toggle-button:hover{
+    cursor: pointer;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 20px;
+}
+
+@media(max-width: 700px){
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links ul li{
+        text-align: center;
+        padding: 0.5rem 1rem;
+    }
+    .navbar-links.active{
+        display: flex;
+    }
+}
+
+/*SLIDER*/
+
 .slider{
     overflow: hidden;
     position: relative;
@@ -147,7 +197,7 @@ header.sticky .logo, header.sticky ul li a{
 }
 .container #map{
     width: 50%;
-    margin: 25px 20px 25px auto;
+    margin: 25px 40px 25px auto;
 }
 .container #map iframe{
     width: 100%;
@@ -296,34 +346,53 @@ header.sticky .logo, header.sticky ul li a{
     border-top-right-radius: 12px;
     
 }
+/*
 
- .quote #display{
+#card-quote .quote #display{
     margin: 1rem auto;
     padding: 1rem;
-    background: #00163c;
+    background: linear-gradient(35deg, #ccffff, #ffcccc);
     position: relative;
     border: solid rgb(192, 191, 191);
-    width: 28rem;
-    height: 10rem;
+    width: 18rem;
+    height: 18rem;
     
 }
-.quote #display #output{
+#card-quote .quote #display #output{
     text-align: center;
     font-size: 1.6rem;
-	color:#f25900;
-opacity: 0.8;
     margin: 0.6rem 1rem 0.6rem 1rem;
 }
-.quote button{
+#card-quote .quote button{
     padding: 0.3rem 0.5rem;
     font-size: 1rem;
-    background:#f25900;
+    background: rgb(202, 240, 240);
     border: 1.5px solid rgb(121, 118, 118);
     position: absolute;
     bottom: 0.6rem;
     right: 0.5rem;
 }
+*/
 
+/*ROTATIONAL SWIPE CARDS*/
+
+.page-wrapper{
+    border: solid black;
+}
+.post-slider{
+    border: solid red;
+}
+.post-slider .post-wrapper{
+    width: 84%;
+    height: 300px;
+    margin: 0 auto; border: solid grey;
+}
+.post-slider .post-wrapper .post{
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    background: #05f7ff;
+}
 
 /*5 IMAGES IN A ROW*/
 
@@ -339,11 +408,17 @@ opacity: 0.8;
     width: 100%;
     vertical-align: middle;
 }
-#img1{flex: 0.9972;}
-#img2{flex: 1;}
-#img3{flex: 1.5;}
-#img4{flex: 1;}
-#img5{flex: 0.9972;}
+#img1-service{flex: 0.9972;}
+#img2-service{flex: 1;}
+#img3-service{flex: 1.5;}
+#img4-service{flex: 1;}
+#img5-service{flex: 0.9972;}
+
+#img1-deal{flex: 1;}
+#img2-deal{flex: 1;}
+#img3-deal{flex: 0.75;}
+#img4-deal{flex: 1.4689;}
+#img5-deal{flex: 1;}
 
 #services-row .column img:hover{
     opacity: 0.9;
