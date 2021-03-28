@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <title>Gas Station</title>
+    <link href="contact.css" rel="stylesheet" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <header>
+      <a class="logo" href="index.html"><img src="logo.png" alt="CANCO"></a>
+      <ul class="nav">
+        <li><a href="index.html">About</a></li>
+        <li><a href="deals.html">Deals</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </header>
+		<img src="canco_04.jpeg" alt="" style="width:100%; height:20%;">
+    <div class="container1"></div>
+<div class="container2 " style="margin-top: 50px">
+    <div class="container3">
+        <h2>How can we improve your next visit?</h2>
+        <p>
+            Please provide your feedback below:
+        </p>
+        <form role="form" method="post" id="reused_form">
+            <div class="container2">
+                <div class="container4">
+                <label>How do you rate your overall experience?</label>
+                <p>
+                    <label class="radio-inline">
+                    <input type="radio" name="experience" id="radio_experience" value="bad" >
+                    Good
+                    </label>
+
+                    <label class="radio-inline">
+                    <input type="radio" name="experience" id="radio_experience" value="average" >
+                    Average
+                    </label>
+
+                    <label class="radio-inline">
+                    <input type="radio" name="experience" id="radio_experience" value="good" >
+                    Bad
+                    </label>
+                </p>
+                </div>
+            </div>
+            <div class="container2">
+                <div class="container5">
+                    <label for="comments">
+                        Comments:</label>
+                    <textarea class="form-control" type="textarea" name="comments" id="comments" placeholder="Your Comments" maxlength="6000" rows="7"></textarea>
+                </div>
+            </div>
+            <div class="container2">
+                <div class="container6">
+                    <label for="name">
+                        Your Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="container7">
+                    <label for="email">
+                        Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+            </div>
+
+                        <div class="container2">
+                <div class="container8">
+                    <button type="submit" class="btn btn-lg btn-warning btn-block" >Post </button>
+                </div>
+            </div>
+
+        </form>
+        <div id="success_message" style="width:100%; height:100%; display:none; ">
+            <h3>Posted your feedback successfully!</h3>
+        </div>
+        <div id="error_message"
+                style="width:100%; height:100%; display:none; ">
+                    <h3>Error</h3>
+                    Sorry there was an error sending your form.
+
+        </div>
+    </div>
+</div>
+
+<script>
+$(function()
+{
+    function after_form_submitted(data)
+    {
+        if(data.result == 'success')
+        {
+            $('form#reused_form').hide();
+            $('#success_message').show();
+            $('#error_message').hide();
+        }
+        else
+        {
+            $('#error_message').append('<ul></ul>');
+
+            jQuery.each(data.errors,function(key,val)
+            {
+                $('#error_message ul').append('<li>'+key+':'+val+'</li>');
+            });
+            $('#success_message').hide();
+            $('#error_message').show();
+
+            //reverse the response on the button
+            $('button[type="button"]', $form).each(function()
+            {
+                $btn = $(this);
+                label = $btn.prop('orig_label');
+                if(label)
+                {
+                    $btn.prop('type','submit' );
+                    $btn.text(label);
+                    $btn.prop('orig_label','');
+                }
+            });
+
+        }//else
+    }
+
+	$('#reused_form').submit(function(e)
+      {
+        e.preventDefault();
+
+        $form = $(this);
+        //show some response on the button
+        $('button[type="submit"]', $form).each(function()
+        {
+            $btn = $(this);
+            $btn.prop('type','button' );
+            $btn.prop('orig_label',$btn.text());
+            $btn.text('Sending ...');
+        });
+
+
+                    $.ajax({
+                type: "POST",
+                url: 'handler.php',
+                data: $form.serialize(),
+                success: after_form_submitted,
+                dataType: 'json'
+            });
+
+      });
+});
+</script>
+
+
+    <div class="app">
+      <div id="hand">
+        <h3>Savings Begin Here!</h3>
+      </div>
+      <div class="app-info">
+        <div class="img-left">
+          <img src="canco-app.jpeg" alt="canco-app">
+        </div>
+        <div class="box-right">
+          <h1>Canco Cash App</h1>
+          <p><b>Canco’s mobile app lets you earn Canco Cash, manage your balance, gift card – card-free.</b></p>
+          <a href="https://apps.apple.com/kh/app/canco-petroleum/id1523902717"><img src="appStore.png" alt="CancoApp-AppleStore"></a><br>
+          <a href="https://play.google.com/store/apps/details?id=com.ackroo.canco&hl=en_CA"><img src="googlePlay.png" alt="CancoApp-AppleStore"></a>
+          <div id="app-button">
+            <a href="https://cancopetroleum.ca/app/app-experience/"><b>Explore the App</b></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      <div id="container">
+        <div id="col-left">
+        <p><a href="https://cancopetroleum.ca/terms/">Terms & Privacy</a></p>
+        <p><a href="https://cancopetroleum.ca/careers/">Careers</a></p>
+        <p><a href="https://cancopetroleum.ca/canco-dealer/">Become a CANCO Dealer</a></p>
+        </div>
+        <div id="col-mid">
+          <h2>Get the Canco Cash App Today!</h2>
+          <p>Canco’s mobile app lets you earn Canco Cash, manage your balance, gift card – card-free.</p>
+        </div>
+        <div id="col-right">
+          <a href="https://apps.apple.com/kh/app/canco-petroleum/id1523902717"><img src="appStore.png" alt="CancoApp-AppleStore"></a><br>
+          <a href="https://play.google.com/store/apps/details?id=com.ackroo.canco&hl=en_CA"><img src="googlePlay.png" alt="CancoApp-AppleStore"></a>
+        </div>
+      </div>
+    </footer>
+ </body>
+</html>
